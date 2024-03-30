@@ -1,3 +1,4 @@
+kernel/sound/soc/amd/yc/acp6x-match.c
 {
 		.driver_data = &acp6x_card,
 		.matches = {
