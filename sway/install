@@ -1,0 +1,15 @@
+#!/bin/bash
+
+cd $HOME
+
+echo "Update System\n"
+sudo pacman -Syu
+
+echo "Install yay\n"
+sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+
+echo "Install SwayFX\n"
+yay -S swayfx
+
+echo "Install depends\n"
+sudo pacman -S swaybg clang gcc python
