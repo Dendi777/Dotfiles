@@ -1,0 +1,80 @@
+// -*- mode: jsonc -*-
+{
+    "layer": "down", 
+    "height": 25, 
+    "margin-top": 5,
+    "margin-left": 10,
+    "margin-right": 10,
+    "margin-bottom": 0,
+    "reload_style_on_change": true,
+    "modules-left": [
+        "sway/workspaces"
+    ],
+    "modules-center": [
+      "clock"
+    ],
+    "modules-right": [
+      "sway/language",
+      "pulseaudio",
+      "network",
+      "battery",
+      "tray",
+      "sway/mode"
+    ], 
+
+    "sway/workspaces": {
+      "persistent_workspaces": {
+        "1": [],
+        "2": [],
+        "3": [],
+        "4": [],
+        "5": []
+      }
+    },
+
+    "sway/language": {
+      "format": "{short}",
+    },
+    "tray": {
+      "icon-size": 20,
+      "spacing": 10
+    },
+
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+
+    "clock": {
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    },
+
+    "battery": {
+        "states": { 
+          "warning": 50,
+          "critical": 30
+        },
+        "format": "{capacity}% {icon}", 
+        "format-charging": "{capacity}% {icon}⚡", 
+        "format-icons": [" ", " ", " ", " ", " "]
+    },
+    
+    "network": { 
+        "format-wifi": "db: {signalStrength} |  ",
+        "format-alt": "{essid}"
+    },
+
+    "pulseaudio": { 
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": "🔒 {volume}",  
+        "format-icons": {
+            "headphone": " ",
+            "phone": " ",
+            "portable": " ",
+            "car": " ",
+            "default": [" ", " ", " "]
+        },
+        "on-click": "pavucontrol-qt"
+    }, 
+}
