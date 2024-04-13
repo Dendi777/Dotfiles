@@ -54,7 +54,7 @@
           "critical": 30
         },
         "format": "{capacity}% {icon}", 
-        "format-charging": "{capacity}% {icon}⚡", 
+        "format-charging": "{capacity}% {icon} ⚡", 
         "format-icons": [" ", " ", " ", " ", " "]
     },
     
@@ -64,7 +64,7 @@
     },
 
     "pulseaudio": { 
-        "format": "{icon} {volume}%",
+        "format": "{volume}% {icon}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": "🔒 {volume}",  

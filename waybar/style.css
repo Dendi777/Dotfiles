@@ -56,21 +56,21 @@ window#waybar {
 
 #clock {
   padding-left: 16px;
-  padding-right: 16px;
-  border-radius: 10px;
-  transition: none;
-  color: #ffffff;
-  background: #383c4a;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: #ffffff;
+    background: #383c4a;
 }
 
 #battery {
-  margin-right: 8px;
-  padding-left: 16px;
-  padding-right: 16px;
-  border-radius: 10px;
-  transition: none;
-  color: #ffffff;
-  background: #383c4a;
+   margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: #ffffff;
+    background: #383c4a;
 }
 
 #battery.charging {
@@ -104,25 +104,25 @@ window#waybar {
 
 #pulseaudio.muted {
   background-color: #90b1b1;
-    color: #2a5c45;
+  color: #2a5c45;
 }
 
 #tray {
   padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: #ffffff;
-    background: #383c4a;
+  padding-right: 16px;
+  border-radius: 10px;
+  transition: none;
+  color: #ffffff;
+  background: #383c4a;
 }
 
 #language {
   padding-left: 10px;
   padding-right: 10px; 
-    border-radius: 5px;
-    transition: none;
-    color: #ffffff;
-    background: #383c4a;
+  border-radius: 5px;
+  transition: none;
+  color: #ffffff;
+  background: #383c4a;
 }
 
 @keyframes blink {

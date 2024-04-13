@@ -1,0 +1,6 @@
+# Update Enviroment
+exec --no-startup-id systemctl --user import-enviroment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec --no-startup-id dbus-update-activation-enviroment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+
+# Start Programs
+exec --no-startup-id telegram-desktop

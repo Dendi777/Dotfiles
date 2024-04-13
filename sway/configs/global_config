@@ -1,0 +1,28 @@
+# wallpapers
+output eDP-1 {
+  bg $HOME/.config/sway/wallpapers/test4k.png fill
+}
+
+# none border [pixel, normal]
+default_border none 
+
+# gapps windows
+gaps inner 10
+
+# Blur windows [SwayFX]
+blur enable
+
+# round windows [SwayFX]
+corner_radius 10
+
+# dim windows  [SwayFX]
+default_dim_inactive 0.2
+
+# Config waybar
+bar {
+    position bottom 
+    swaybar_command waybar-custom
+}
+
+# Rule window start telegram to workspace 5 from floating mode
+for_window [app_id="org.telegram.desktop"] move container to workspace 5, floating enable
