@@ -4,11 +4,11 @@ include $HOME/.config/sway/configs/autostart
 # Inputs
 include $HOME/.config/sway/configs/input
 
-# Global Config
-include $HOME/.config/sway/configs/global_config
-
 # Base Keybinding
 include $HOME/.config/sway/configs/base_keybindings
+
+# Global Config
+include $HOME/.config/sway/configs/global_config
 
 # User Keybinding
 include $HOME/.config/sway/configs/user_keys

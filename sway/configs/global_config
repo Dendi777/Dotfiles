@@ -18,11 +18,10 @@ corner_radius 10
 # dim windows  [SwayFX]
 default_dim_inactive 0.2
 
-# Config waybar
-bar {
-    position bottom 
-    swaybar_command waybar-custom
-}
-
 # Rule window start telegram to workspace 5 from floating mode
 for_window [app_id="org.telegram.desktop"] move container to workspace 5, floating enable
+
+# Config waybar
+bar { 
+    swaybar_command waybar-custom
+}

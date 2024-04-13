@@ -1,12 +1,11 @@
 ##################### Base KEY BINDINGS ################################
-# Set win key
 set $mod Mod4
 
 # kill focus window
 bindsym $mod+q kill
 
-# ??
-# floating_modifier $mod normal
+# Resize floating window from Mouse
+floating_modifier $mod normal
 
 # reload config
 bindsym $mod+control+r reload
@@ -47,7 +46,7 @@ bindsym $mod+control+f fullscreen
 # window to floating 
 bindsym $mod+f floating toggle
 
-# bindsym $mod+space focus mode_toggle
+bindsym $mod+space focus mode_toggle
 
 # return focus window
 bindsym $mod+a focus parent
