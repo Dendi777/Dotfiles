@@ -7,24 +7,18 @@
 подключение wifi:
 <ol>
   <li>iwctl</li>
-
   <li>station {interface} scan</li>
-
   <li>station {interface} get-networks</li>
-
   <li>station {interface} connect {network}</li>
-
   <li>и проверить ping 1.1.1.1</li>
 </ol>
 
 2. Разметка дисков:
-
-cfdisk /dev/nvme0n1 или /dev/{sdaX}
 <ol>
+  <li>fdisk -l</li>
+  <li>cfdisk /dev/nvme0n1 или /dev/{sdaX}</li>
   <li>efi раздел на 512mb или 1G</li>
-
   <li>root на 120GB и выше</li>
-
   <li>home на все остальное но можно и без него нужен для более удобного переноса данных</li>
 </ol>
 
@@ -39,4 +33,11 @@ cfdisk /dev/nvme0n1 или /dev/{sdaX}
   <li>mount /dev/{раздел root} /mnt</li>
   <li>mkdir -p /mnt/boot/efi</li>
   <li>mount /dev/{раздел efi} /mnt/boot/efi</li>
+</ol>
+
+5. Установка базовой системы и вход в chroot
+<ol>
+  <li>pacstrap -i /mnt base linux linux-firmware sof-firmware amd-ucode iwd neovim</li>
+  <li>genfstab -U /mnt >> /mnt/etc/fstab</li>
+  <li>arch-chroot /mnt</li>
 </ol>
