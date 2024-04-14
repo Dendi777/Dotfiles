@@ -52,6 +52,7 @@
   <li>echo "archlinux" > /etc/hostname</li>
   <li>pacman -S grub os-prober efibootmgr</li>
   <li>grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=grub --recheck</li>
+  <li>редактировать /etc/default/grub и расскоментировать GRUB_DISABLE_OS_PROBER=false если нет нужно создать</li>
   <li>passwd</li>
 </ol>
 
