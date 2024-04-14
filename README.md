@@ -41,3 +41,23 @@
   <li>genfstab -U /mnt >> /mnt/etc/fstab</li>
   <li>arch-chroot /mnt</li>
 </ol>
+
+6. базовая астройка системы
+<ol>
+  <li>ln -sf /usr/share/zoneinfo/Europe/Moscow /etc/localtime</li>
+  <li>hwclock --systohc</li>
+  <li>редактирование /etc/locale.gen</li>
+  <li>echo "ru_RU.UTF-8" > /etc/locale.conf</li>
+  <li>echo "FONT=cyr-sun16" > /etc/vconsole.conf</li>
+  <li>echo "archlinux" > /etc/hostname</li>
+  <li>pacman -S grub os-prober efibootmgr</li>
+  <li>grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=grub --recheck</li>
+  <li>passwd</li>
+</ol>
+
+7. Выход и перезагрузка:
+<ol>
+  <li>exit</li>
+  <li>umount -R /mnt</li>
+  <li>shutdown -r now</li>
+</ol>
