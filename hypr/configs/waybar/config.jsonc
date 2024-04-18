@@ -1,0 +1,75 @@
+// -*- mode: jsonc -*-
+{
+    "layer": "down", 
+    "height": 30, 
+    "margin-top": 5,
+    "margin-left": 10,
+    "margin-right": 10,
+    "margin-bottom": 0,
+    "reload_style_on_change": true,
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+      "clock"
+    ],
+    "modules-right": [
+      "hyprland/language",
+      "pulseaudio",
+      "network",
+      "battery",
+      "tray",
+      "hyprland/mode"
+    ], 
+
+    "hyprland/workspaces": {
+	    "format": "{name}"	  
+    },
+
+    "hyprland/language": {
+      "format": "{short}"
+    },
+
+    "tray": {
+      "icon-size": 20,
+      "spacing": 10
+    },
+
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+
+    "clock": {
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "battery": {
+        "states": { 
+          "warning": 50,
+          "critical": 30
+        },
+        "format": "{capacity}% {icon}", 
+        "format-charging": "{capacity}% {icon} ⚡", 
+        "format-icons": [" ", " ", " ", " ", " "]
+    },
+    
+    "network": { 
+        "format-wifi": "db: {signalStrength} |  ",
+        "format-alt": "{essid}"
+    },
+
+    "pulseaudio": { 
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": "🔒 {volume}",  
+        "format-icons": {
+            "headphone": " ",
+            "phone": " ",
+            "portable": " ",
+            "car": " ",
+            "default": [" ", " ", " "]
+        },
+        "on-click": "pavucontrol-qt"
+    }, 
+}

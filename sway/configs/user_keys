@@ -1,6 +1,6 @@
 ################################ Base Keybindings ##########################################
 # Programs
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec kitty
 bindsym $mod+shift+b exec chromium --ozone-platform=wayland
 bindsym $mod+shift+t exec telegram-desktop
 bindsym $mod+shift+l exec libreoffice
