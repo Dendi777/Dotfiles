@@ -4,6 +4,7 @@ bindsym $mod+Return exec kitty
 bindsym $mod+shift+b exec chromium --ozone-platform=wayland
 bindsym $mod+shift+t exec telegram-desktop
 bindsym $mod+shift+l exec libreoffice
+bindsym $mod+shift+n exec nemo
 
 # Audio
 bindsym --locked XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
@@ -14,8 +15,8 @@ bindsym --locked XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@
 bindsym XF86AudioMicMute exec amixer set Capture toggle
 
 # Brightness
-bindsym XF86MonBrightnessDown exec brightnessctl set 5-
-bindsym XF86MonBrightnessUp exec brightnessctl set +5
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
 
 # screenshot to clipboard Wayland
 bindsym Print exec grim -g "$(slurp)" - | wl-copy

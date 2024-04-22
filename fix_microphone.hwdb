@@ -1,2 +1,0 @@
-evdev:atkbd:*
-  KEYBOARD_KEY_66=micmute

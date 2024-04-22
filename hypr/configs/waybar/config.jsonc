@@ -11,14 +11,14 @@
         "hyprland/workspaces"
     ],
     "modules-center": [
-      "clock"
+      "tray"
     ],
     "modules-right": [
       "hyprland/language",
       "pulseaudio",
       "network",
       "battery",
-      "tray",
+      "clock",
       "hyprland/mode"
     ], 
 
