@@ -19,5 +19,6 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
 
 # screenshot to clipboard Wayland
+# bindsym Alt+Print grim -g "$(swaymsg -t get_tree | jq -j '.. | select(.type?) | select(.focused).rect | "\(.x),\(.y) \(.width)x\(.height)"')" - | wl-copy
 bindsym Print exec grim -g "$(slurp)" - | wl-copy
 ############################################################################################

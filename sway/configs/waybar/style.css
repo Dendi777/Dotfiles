@@ -1,9 +1,10 @@
 * {
+  font-family: NotoMono Nerd Font;
   border: none;
-  min-height: 15px;
 }
 
 window#waybar {
+  border-radius: 5px;
   background: transparent;
 }
 
@@ -15,24 +16,19 @@ window#waybar {
 }
 
 #workspaces button {
-  transition: none;
+    transition: none;
     color: #7c818c;
     background: transparent;
     padding: 5px;
-    font-size: 15px;
-}
-
-#workspaces button:hover {
-    transition: none;
-    box-shadow: inherit;
-    text-shadow: inherit;
-    border-radius: inherit;
-    color: #383c4a;
-    background: #7c818c;
+    font-size: 18px;
 }
 
 #workspaces button.focused {
     color: white;
+}
+
+#workspaces button.active {
+  color: white;
 }
 
 #clock,
@@ -56,11 +52,11 @@ window#waybar {
 
 #clock {
   padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: #ffffff;
-    background: #383c4a;
+  padding-right: 16px;
+  border-radius: 10px;
+  transition: none;
+  color: #ffffff;
+  background: #383c4a;
 }
 
 #battery {
@@ -75,7 +71,7 @@ window#waybar {
 
 #battery.charging {
   color: #ffffff;
-    background-color: #26A65B;
+  background-color: #26A65B;
 }
 
 #network { 
@@ -100,11 +96,6 @@ window#waybar {
     transition: none;
     color: #ffffff;
     background: #383c4a;
-}
-
-#pulseaudio.muted {
-  background-color: #90b1b1;
-  color: #2a5c45;
 }
 
 #tray {
