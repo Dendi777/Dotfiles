@@ -1,0 +1,17 @@
+[language-server.pyright]
+command = "pyright-langserver"
+args = ["--stdio"]
+config = {} 
+
+[[language]]
+name = "python"
+indent = { tab-width = 2, unit = "  " }
+language-servers = [ "pyright" ]
+
+[[language]]
+name = "rust"
+indent = { tab-width = 2, unit = "  " }
+
+[[language]]
+name = "go"
+indent = { tab-width = 2, unit = "  " }

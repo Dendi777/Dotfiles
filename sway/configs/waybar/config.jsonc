@@ -1,42 +1,42 @@
 // -*- mode: jsonc -*-
 {
     "layer": "top",
-    "position": "top",
-    //"height": 30,
-    //"width": 150,
-    "margin-top": 5,
-    "margin-left": 10,
-    "margin-right": 10,
+    "position": "bottom",
+    "margin-top": 0,
+    "margin-left": 5,
+    "margin-right": 5,
     "margin-bottom": 5,
     "reload_style_on_change": true,
     
-    "modules-left": [ 
-      "sway/workspaces", 
+    "modules-left": [
+      "sway/workspaces",
+      "sway/language"
+    ],
+
+    "modules-center": [
       "tray"
     ],
-    "modules-center": [
-      "clock"
-    ],
+      
     "modules-right": [
+      "pulseaudio",
       "battery",
-      "pulseaudio", 
-      "network",
-      "sway/mode"
-    ], 
-
+      "clock",   
+    ],
+    
     "sway/workspaces": {
-      "persistent-workspaces": {
-        "1": [],
-        "2": [],
-        "3": [],
-        "4": [],
-        "5": []
+	    "disable-scroll": true,
+	    "format": "{name}",
+	    "persistent-workspaces": {
+	      "1": [],
+	      "2": [],
+		    "3": [],
+		    "4": [],
+		    "5": []
       }
     },
     
     "tray": {
-      "icon-size": 20,
-      "spacing": 10
+		  "icon-size": 25,
     },
 
     "sway/mode": {
@@ -61,33 +61,19 @@
 			    "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
 		    }
 	    },
-	    "actions": {
-		    "on-click-right": "mode",
-		    "on-click-forward": "tz_up",
-		    "on-click-backward": "tz_down",
-	    }
     },
 
     "battery": {
-        "states": { 
-          "warning": 50,
-          "critical": 30
-        },
         "format": "{capacity}% {icon}", 
         "format-charging": "{capacity}% {icon} ⚡", 
         "format-icons": [" ", " ", " ", " ", " "]
     },
     
-    "network": { 
-        "format-wifi": "db: {signalStrength} |  ",
-        "format-alt": "{essid}"
-    },
-
     "pulseaudio": { 
         "format": "{icon} {volume}% | {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": "🔒  | {format_source}",
+        "format-muted": "🔒 | {format_source}",
         "format-source": "  {volume}%",
         "format-source-muted": " ",
         "format-icons": {
@@ -98,5 +84,5 @@
             "default": [" ", " ", " "]
         },
         "on-click": "pavucontrol-qt"
-    } 
+    }
 }
